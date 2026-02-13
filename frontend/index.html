@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCRAPIFY</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+  <div class="left"></div>
+
+  <div class="right">
+
+    <div class="logo">
+      <img src="https://i.imgur.com/1tU9D3N.png">
+      <span>SCRAPIFY</span>
+    </div>
+
+    <h1>Automated Web Data Extraction</h1>
+    <p class="subtitle">
+      Configure intelligent scraping tasks with advanced controls,
+      automation settings, and clean export options.
+    </p>
+
+    <div class="panel">
+      <h3>Target Website</h3>
+      <input id="url" placeholder="https://example.com">
+      <button onclick="start()">Start Extraction</button>
+    </div>
+
+    <div class="panel">
+      <h3>Task Settings</h3>
+
+      <div class="toggle">
+        <span>Render JavaScript Pages</span>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle">
+        <span>Auto Clean & Normalize Data</span>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle">
+        <span>Rotate User Agents</span>
+        <input type="checkbox">
+      </div>
+
+      <div class="toggle">
+        <span>Respect robots.txt</span>
+        <input type="checkbox" checked>
+      </div>
+
+      <select>
+        <option>Scraping Depth: Low</option>
+        <option>Scraping Depth: Medium</option>
+        <option>Scraping Depth: High</option>
+      </select>
+
+      <select>
+        <option>Retry Attempts: 1</option>
+        <option>Retry Attempts: 3</option>
+        <option>Retry Attempts: 5</option>
+      </select>
+
+      <input type="time">
+    </div>
+
+    <div class="panel">
+      <h3>Export Options</h3>
+      <div class="actions">
+        <button>Export JSON</button>
+        <button>Export CSV</button>
+        <button>Clear Task</button>
+      </div>
+
+      <div class="status" id="status">
+        Status: Waiting for task
+      </div>
+    </div>
+
+    <footer>
+      © 2026 SCRAPIFY · All rights reserved
+    </footer>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
