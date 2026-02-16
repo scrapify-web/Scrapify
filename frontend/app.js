@@ -10,7 +10,8 @@ async function start() {
   status.innerText = "Status: Extracting...";
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/scrape", {
+    const response = await fetch("https://scrapify-t7la.onrender.com/scrape", {
+
       method: "POST",
       headers: {
         "Content-Type": "application/json"
