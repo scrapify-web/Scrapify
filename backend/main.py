@@ -5,13 +5,11 @@ from scraper import scrape_site
 
 app = FastAPI(title="SCRAPIFY API")
 
-# ✅ Proper CORS configuration for Render frontend
+# ✅ Strong CORS setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://scrapify-frontend.onrender.com",
-    ],
-    allow_credentials=True,
+    allow_origins=["https://scrapify-frontend.onrender.com"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -29,4 +27,3 @@ def root():
 def scrape(req: ScrapeRequest):
     data = scrape_site(req.url, req.depth, req.use_js)
     return {"pages": data}
-
