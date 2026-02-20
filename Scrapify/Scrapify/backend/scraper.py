@@ -6,8 +6,7 @@ from fake_useragent import UserAgent
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from utils import clean, can_fetch, EMAIL_RE, PHONE_RE
-
+from backend.utils import clean, can_fetch, EMAIL_RE, PHONE_RE
 UA = UserAgent()
 
 def get_driver():
@@ -69,3 +68,4 @@ def scrape_site(url, depth=2, use_js=True):
 
     crawl(url, depth)
     return results
+
