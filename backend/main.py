@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from backend.scraper import scrape_site  # ← FIXED
-
+from .scraper import scrape_site
 app = FastAPI(title="SCRAPIFY API")
 
 app.add_middleware(
