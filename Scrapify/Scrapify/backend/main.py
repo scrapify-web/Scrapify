@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from scraper import scrape_site
+from backend.scraper import scrape_site
 
 app = FastAPI(title="SCRAPIFY API")
 
@@ -13,3 +13,4 @@ class ScrapeRequest(BaseModel):
 def scrape(req: ScrapeRequest):
     data = scrape_site(req.url, req.depth, req.use_js)
     return {"pages": data}
+
